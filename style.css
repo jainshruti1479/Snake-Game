@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Noto+Sans&family=Nunito:wght@300&family=Play&family=Ubuntu:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 100vw;
+    height:100vh;
+    background-color: green;
+    overflow: hidden;
+}
+#game_name{
+    animation: snakeAnime 2s ease-in;
+    font-family: 'Bungee Spice';
+    position: absolute;
+    top: 11vh;
+    font-size: 7.5vh;
+}
+#snake{   
+    background-image: url(assets/snake1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 54vh;
+    height: 54vh;
+    position: absolute;
+    animation: snakeAnime 2s ease-in;
+    top: 25vh;
+}
+#play_button{
+    background-color: antiquewhite ;
+    padding: 10px 31px;
+    position: absolute;
+    bottom: 9vh;
+    font-family: 'Play', sans-serif;
+    font-size: 1.2rem;
+    /* font-family: 'Nunito', sans-serif; */
+    animation: snakeAnime 2s ease-in;
+    transition: all 0.4s ease-in-out;
+}
+#play_button:hover{
+    background-color:green ;
+    cursor: pointer;
+}
+#game_over{
+    font-family: 'Bungee Spice';
+    position: absolute;
+    font-size: 8.5vh;
+    animation: snakeAnime 2s ease-in;
+    display: none;
+}
+#play_again{
+    background-color: antiquewhite ;
+    padding: 7px 30px;
+    position: absolute;
+    bottom: 35vh;
+    font-family: 'Play', sans-serif;
+    font-size: 1.1rem;
+    /* font-family: 'Nunito', sans-serif; */
+    animation: snakeAnime 2s ease-in;
+    transition: all 0.4s ease-in-out;
+    display: none;
+}
+#play_again:hover{
+    background-color:green ;
+    cursor: pointer;
+}
+#board{
+    display: grid;
+    width: 91vmin;
+    height: 91vmin;
+    background: linear-gradient(rgb(95, 216, 95), rgb(232, 232, 164));
+    border: 2px solid black;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(18,auto);
+    
+}
+#score{
+    position: absolute;
+    font-family: 'Ubuntu', sans-serif;
+    top: 5vh;
+    font-weight: 600;
+    right: 9vw;
+    font-size: larger;
+    visibility: hidden;
+}
+#scoreValue{
+    margin-left:5px ;
+}
+#hscore{
+    position: absolute;
+    font-family: 'Ubuntu', sans-serif;
+    top: 9.5vh;
+    font-weight: 600;
+    right: 5.4vw;
+    font-size: larger;
+    visibility: hidden;
+}
+#hscoreValue{
+    margin-left:5px ;
+}
+.snakeHead{
+    /* background: linear-gradient(rgb(255 0 29),rgb(255 119 1)); */
+    background-color: black;
+    background-image: url(assets/snake_eyes.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.food{
+    background-image: url(assets/food.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.snakeBody{
+    background: linear-gradient(black,#172917,rgb(255 119 1));
+    border-radius: 5px;
+}
+.snakeEyes{
+    background-image: url(assets/snake_eyes.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.eye1{
+    border-radius: 40%;
+    background-color: black;
+    position: relative;
+    width: 14px;
+    height: 14px;
+}
+.eye2{
+    border-radius: 40%;
+    background-color: black;
+    position: relative;
+    width: 14px;
+    height: 14px;
+    left: 8px;
+}
+@keyframes snakeAnime{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
